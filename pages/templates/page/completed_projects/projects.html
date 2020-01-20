@@ -1,4 +1,30 @@
 {% extends 'base_layout/base.html' %}
 {% load static %}
+{% block header %}
+<div class="logo-box">
+    <img src="{% static 'img/pytonixs.svg' %}" class="logo" alt="Eagle Designs logo">
+</div>
+{% endblock %}
 {% block content %}
+<section class="project-page">
+    <div class="row">
+        <div class="project-page__content">
+            <div class="project-page--left">
+                <img src="{% static 'img/macgregor-home.png' %}" alt="macgregor home page image" class="project-page--img">
+            </div>
+            <div class="project-page--right">
+                <h3 class="project-page--heading">macgregor construction</h3>
+                <h4 class="project-page--heading-2">django web development</h4>
+                <p class="project-page--text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum veniam nisi amet debitis alias ea! Quod necessitatibus excepturi 
+                    odio nam molestias doloremque temporibus, libero nobis numquam tempora molestiae hic aspernatur quis architecto voluptatibus, 
+                    ipsa accusantium vitae recusandae dicta quam saepe. Repellat magnam quas magni fugiat aut alias ab pariatur in.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum veniam nisi amet debitis alias ea! Quod necessitatibus excepturi 
+                    odio nam molestias doloremque temporibus, libero nobis numquam tempora molestiae hic aspernatur quis architecto voluptatibus,
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum veniam nisi amet debitis alias ea! Quod necessitatibus excepturi 
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}

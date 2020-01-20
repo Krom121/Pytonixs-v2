@@ -45,8 +45,18 @@ class ServiceView(TemplateView):
 class ProjectView(TemplateView):
     template_name = 'page/completed_projects/projects.html'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Our Work'
+        return context
+
 class ContactUsView(TemplateView):
     template_name = 'page/contact_us/contact_us.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Contact Us'
+        return context
 
 class ContactView(FormView):
     form_class = ContactForm
