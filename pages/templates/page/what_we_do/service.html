@@ -1,4 +1,53 @@
 {% extends 'base_layout/base.html' %}
 {% load static %}
+{% block header %}
+    <div class="logo-box">
+        <img src="{% static 'img/pytonixs.svg' %}" class="logo" alt="Eagle Designs logo">
+    </div>
+{% endblock %}
 {% block content %}
+<section class="service-page">
+    <div class="row bg-service">
+        <i class="service-page__icon icon-basic-laptop"></i>
+        <h4 class="service-page__heading">Web development</h4>
+        <p class="service-page__text">
+            Web development includes many types of content creation.
+            Where web pages are custom built to a branding brief of a perticular company and it's industry. 
+            High-level frameworks like Django and React.js used to speed up development. 
+            Companies who want to have a web development team to build and maintain their web application will choose this option.
+        </p>
+    </div>
+    <div class="row">
+        <i class="service-page__icon icon-basic-gear"></i>
+        <h4 class="service-page__heading">Content Management systems</h4>
+        <p class="service-page__text">
+            Content management systems are used by bloggers and Companies who want to be able to manage the creation 
+            and modification of their digital content. 
+            A CMS can also be used by multiple users of a company. 
+            Django the Python framework is well suited too.
+        </p>
+    </div>
+    <div class="row">
+            <i class="service-page__icon icon-basic-signs"></i>
+            <h4 class="service-page__heading">Digital Marketing</h4>
+            <p class="service-page__text">
+                Digital marketing methods such as search engine optimization(SEO),
+                search engine marketing (SEM) can create, accelerate, and present a product or service value to the consumer. 
+                Facebook, Youtube are also great ways of building a community and marketing your company.
+                Give us a call and let us help you build your marketing up.
+            </p>
+    </div>
+    <div class="row">
+        <i class="service-page__icon icon-basic-server-cloud"></i>
+        <h4 class="service-page__heading">Hosting</h4>
+        <p class="service-page__text">
+            Cloud servers are one of the best ways of serving your
+            online solution to the world. 
+            With the cloud comes flexibility and scalability that allows your 
+            web application to keep up with the demands of your users. 
+            Our servers are in the cloud, not our heads.
+        </p>
+    </div>
+</section>
+
 {% endblock %}

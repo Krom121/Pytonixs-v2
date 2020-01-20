@@ -37,6 +37,10 @@ class AboutView(TemplateView):
 class ServiceView(TemplateView):
     template_name = 'page/what_we_do/service.html'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Services'
+        return context
 
 class ProjectView(TemplateView):
     template_name = 'page/completed_projects/projects.html'
