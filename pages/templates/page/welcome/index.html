@@ -1,4 +1,223 @@
 {% extends 'layout/base.html' %}
 {% load static %}
 {% block content %}
+<section class="about-section" id="about-section">
+    <div class="row">
+        <div id="box-1" class="col-2-of-3">
+            <p class="paragraph">
+                We are a creative web development company based in Chester City, 
+                United Kingdom.
+                With our knowlage we will provide 
+                the best online solution for your branding needs. With our
+                 web designers &amp; 
+                 web developers we can 
+                 build a website 
+                 that promotes your company branding the way you have invisioned.
+                With SEO and social media we will help you 
+                reach out to your local community and 
+                beyond.
+        
+            </p>
+            <h5 class="margin-bottom-md motto-heading">
+                Entrust your vision with us &amp; we will share your vision with the world.
+            </h5>
+            
+            <a href="{% url 'about' %}" class="btn--slim">Find out more &#10144;</a>
+        </div>
+        <div class="col-1-of-3">
+           <img class="about-image" src="{% static 'img/web-dev350x300.jpg' %}" alt="Image of web design"> 
+    </div>
+</section>
+<section class="process">
+    <h2 class="white-heading margin-bottom-lg">Code Forge</h2>
+    <div class="row process-box">
+        <div class="col-1-of-2">
+            <img src="{% static 'img/meetings.png' %}" alt="meeting people" class="process-box__img">
+        </div>
+        <div class="col-1-of-2">
+            <h5 class="heading-tertiary margin-top-sm">first contact</h5>
+            <p class="process-box__text">
+                The first time we meet is to discuss your ideas.
+                Branding that you have envisioned for your company.
+                What type of online solution that is best for you.
+                What services you want to offer to the world. 
+                Importantly who is your target audience?
+            </p>
+        </div>
+    </div>
+    <div class="row process-box--blue">
+        <div class="col-1-of-2">
+            <h5 class="heading-tertiary margin-top-sm">Brainstroming</h5>
+            <p class="process-box__text">
+                Brainstorming time,<br> Where ideas are put together to form a brief for branding and
+                technology that you want to use for your online solution.<br>
+                What services you want to include. <br>
+                The target audience you want to attract.
+            </p>
+        </div>
+        <div class="col-1-of-2">
+            <img src="{% static 'img/ideas.png' %}" alt="meeting people" class="process-box__img">
+        </div>
+    </div>
+    <div class="row process-box">
+        <div class="col-1-of-2">
+            <img src="{% static 'img/design.png' %}" alt="meeting people" class="process-box__img">
+        </div>
+        <div class="col-1-of-2">
+            
+            <h5 class="heading-tertiary margin-top-sm">Design &amp; Branding</h5>
+            <p class="process-box__text">
+                Off the drawing board to a final design,<br> 
+                We will hone in on how you want to tell the story of your company and Finalising your branding needs. 
+                Images, logos, infographics, and content are all created based on your brand.<br> 
+                You can see what your website will look and feel like.
+            </p>
+        </div>
+    </div>
+    <div class="row process-box--blue">
+        <div class="col-1-of-2">
+            <h5 class="heading-tertiary margin-top-sm">Development</h5>
+            <p class="process-box__text">
+                The start of the development process,<br> where our developers work tirelessly to build your online solution from the ground up. 
+                Your application will be tested for bugs to ensure all functionality works as expected. 
+                We maximize the performance of your website for the benifit of your intended users.
+            </p>
+        </div>
+        <div class="col-1-of-2">
+            <img src="{% static 'img/development.png' %}" alt="meeting people" class="process-box__img">
+        </div>
+    </div>
+    <div class="row process-box">
+        <div class="col-1-of-2">
+            <img src="{% static 'img/revision.png' %}" alt="meeting people" class="process-box__img">
+        </div>
+        <div class="col-1-of-2">
+            <h5 class="heading-tertiary margin-top-sm">Final Re-Visions</h5>
+            <p class="process-box__text">
+                Before your website is viewed by the world, <br>
+                its time to check that everything is up to scratch 
+                and that any changes are made before we go live with your creation. 
+                Changes can be made anytime whether the website is live or in development.
+            </p>
+        </div>
+    </div>
+    <div class="row process-box--blue">
+        <div class="col-1-of-2">
+            <h5 class="heading-tertiary margin-top-sm center-text">Going Live</h5>
+            <p class="process-box__text">
+                Once your band is live for the whole world to see, <br>
+                Get promoting your company with social media campaigns and start building your online community. 
+                We will be there to help you maintain your online solution and create new exciting content with you to retain your new 
+                and existing customers.
+            </p>
+        </div>
+        <div class="col-1-of-2">
+            <img src="{% static 'img/live.png' %}" alt="meeting people" class="process-box__img">
+        </div>
+    </div>
+</section>
+<section class="project-section" id="project-modal-1">
+    <div class="center-text margin-bottom-lg">
+        <h2 class="heading--secondary">completed Websites</h2>
+    </div>
+    <div class="row">
+        <div class="project-item">
+            <img class="project-item__img" src="{% static 'img/macgregor-home.png' %}" alt="house building project">
+                <div class="project-item__overlay">
+                    <div class="project-item__content">
+                    <h4 class="project-item__text">Macgregor Construction</h4>
+                    <span class="margin-top-sm"><a href="{% url 'project' %}" data-modal="project-modal-2" class="project-item__link open-modal">More Info</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="review-section">
+    <div class="bg-video">
+        <video class="bg-video__content" autoplay muted loop>
+            <source src="{% static 'img/Oculus.mp4' %}" type="video/mp4">
+            <source src="{% static 'img/Oculus.webm' %}" type="video/webm">
+        Your browser is not supported!
+        </video>
+    </div>
+    <div class="center-text margin-bottom-sm">
+        <h2 class="heading--secondary">Our Clients</h2>
+    </div>
+        <div class="row">
+        <div class="review">
+            <h2 class="review__heading center-text margin-bottom-sm margin-top-sm">Macgregor Construction</h2>
+            <p class="review__text center-text">
+            Working with Pytonixs Ltd has been the very best part of my new website. 
+            I was nervous looking for a developer online, not sure of what I was getting myself into, 
+            but from the very first conversation with Pytonixs I felt so assured 
+            that the team knew exactly what they were doing and would be the right people to work with.
+            They are the most understanding, competent and intelligent people - 
+            where parts of the new website were not well planned out by myself, 
+            they offered great advice and suggestions which I am very thankful for. 
+            Pytonixs team have helped me to bring my dream to life and I will forever be grateful to them for this. 
+            I cannot recommend them highly enough!
+            </p>
+        </div>
+        </div>     
+</section>
+<section class="service-section">
+<div class="row">
+        <div class="review">
+            <h2 class="review__heading center-text margin-bottom-sm margin-top-sm">What we offer</h2>
+            <p class="review__text center-text">
+            At Pytonixs Ltd we offer many services that can provide you with
+            a multidue of solutions for your company. Whether you want to be a world class 
+            blogger or promote a local event. Rebranding your company website through to 
+            building your start up company from the ground up, we have the solutions for you...
+            </p>
+            <div class="blog-section__btn margin-top-sm">
+            <button data-modal-target="#modal" class="btn btn--form">Get your website today</button>
+            <a href="{% url 'service' %}" role="button" class="btn btn--form">Find out more about what we do</a>           
+        </div>
+        </div>
+    <div class="modal" id="modal">
+        <div class="modal--header">
+            <div class="title">Your New website awaits</div>
+            <button data-close-button class="close-button">&times;</button>
+        </div>
+        <div class="modal--body">
+            <form action="{% url 'home' %}" method="POST">
+            {% csrf_token %}
+                {{ form }}
+                
+                <button class="btn--form-2">Give me my website<span class="form-container__icons">&#128513;</span></button>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="overlay"></div>
+</section>
+<section class="blog-section">
+    <div class="row">
+       <p class="blog-section__text">
+        <span class="blog-section__text--bolder">Get to know us better,</span>
+        Read our blogs you will be surprised at what topics we cover. 
+        Find out what we think about the tech industry, 
+        find out about our hobbies, our favorite movies. 
+        Leave your comments and tell us what you think. 
+        As we would love to get to know you too.
+       </p> 
+       <div class="blog-section__btn margin-top-sm">
+       <a href="#" class="btn btn--white">Read our lastest blogs</a>           
+        </div>
+    </div>  
+</section>
+<section class="contact-section">
+      <div class="form-container">
+            <h2 class="form-container__heading">Get in Touch today</h2>
+            <form action="" method="POST">
+            {% csrf_token %}
+                {{ form }}
+                {{ field }}
+                {{ form.errors }}
+                <button class="btn--form-2">Send your message<span class="form-container__icons">&#128513;</span></button>
+            </form>
+        </div>   
+</section>
 {% endblock %}
