@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+{% include "layout/head.html" %}
+<body>
+ <div class="navbar">
+    <input type="checkbox" class="navbar__checkbox" id="navi-toggle">
+    <label for="navi-toggle" class="navbar__button">
+        <span class="navbar__icon">
+            &nbsp;
+        </span>
+    </label>
+    <div class="navbar__background"></div>
+        <nav class="navbar__nav">
+            <ul class="navbar__list">
+                <li class="navbar__item"><a href="{% url 'home' %}" class="navbar__link">Home</a></li>
+                <li class="navbar__item"><a href="{% url 'about' %}" class="navbar__link">Who we are</a></li>
+                <li class="navbar__item"><a href="{% url 'service' %}" class="navbar__link">What We Do</a></li>
+                <li class="navbar__item"><a href="{% url 'project' %}" class="navbar__link">Completed works</a></li>
+                <li class="navbar__item"><a href="{% url 'contact' %}" class="navbar__link">Get in touch today</a></li>
+            </ul>
+        </nav>
+    </div>
+{% block header %}
+{% include "layout/header.html" %}
+{% endblock %}
+    <main>
+    {% block content %}
+    {% endblock %}
+    </main>
+{% include 'layout/footer.html' %}    
+</body>
+</html>
