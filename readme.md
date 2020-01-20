@@ -1,4 +1,4 @@
-### My Portfolio Website
+# My Portfolio Website
 
 This project is a combination of what i have learned and going to learn.
 
