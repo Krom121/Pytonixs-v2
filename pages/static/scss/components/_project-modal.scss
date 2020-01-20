@@ -1,0 +1,81 @@
+.project-item{
+    margin: 0 auto;
+    position: relative;
+
+    &:hover &__overlay{
+        height: 100%;
+       
+    }
+
+    &__img{
+      display: block;
+      width: 30%;
+      height: 50rem;
+      border-radius: 3px;
+
+      @include respond(tab-port){
+        width: 30% !important;
+
+    }
+    
+    @include respond(phone){
+        width: 30% !important;
+       
+    }
+    }
+
+    &__content{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $primary-font-color;
+
+        & > span{
+            display: block;
+            
+        }
+    }
+
+    &__text{
+        text-transform: uppercase;
+        text-align: center; 
+        font-size: 1.5rem;
+    }
+
+    &__link{
+        &:link,
+        &:visited{
+            text-decoration: none;
+            color: #fff;
+            text-transform: uppercase;
+            text-align: center;
+            display: block;
+            padding: .5rem;
+            transition: all .3s ease;
+    }
+
+        &:hover,
+        &:active{
+            color: $primary-font-color;
+            background-color: $color-primary-light;
+            border-radius: 3px;
+            box-shadow: 0 1rem 2rem rgba(0,0,0, .4);
+            transform: scale(1.1) skewY(-3deg);
+        }
+    }
+
+    &__overlay{
+       position: absolute;
+       bottom: 0;
+       left: 0;
+       right: 0;
+       background-color: $color-primary-light;
+       opacity: 0.8;
+       width: 30%;
+       height: 0;
+       border-radius: 3px;
+       transition: all .5s ease;
+       overflow: hidden; 
+    }   
+}

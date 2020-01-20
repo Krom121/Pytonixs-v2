@@ -1,0 +1,55 @@
+.form-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    padding: 4rem;
+    background-image: linear-gradient(to bottom,
+    rgba($color-primary-light, 0.7), 
+    rgba($color-primary-dark, 0.7));
+    border-radius: 2.5rem;
+    box-sizing: border-box; 
+    box-shadow: 0 1.5rem 4rem rgba(0,0,0, .5);
+
+    @include respond(tab-port){
+        width: 100%;
+    }
+
+    @include respond(tab-land){
+        width: 75%;
+    }
+
+    &__heading{
+        text-align: center;
+        font-size: 4rem;
+        margin: 0 0 3rem;
+        padding: 0;
+    }
+
+    &__inputbox{
+        position: relative;
+    }
+
+    &__inputbox, input{
+        width: 100%;
+        padding: 1rem 0;
+        font-size: 1.6rem;
+        color: $primary-font-color;
+        margin-bottom: 3rem;
+        border: none;
+        border-bottom: 1px solid $primary-font-color;
+        outline: none;
+        background: transparent;
+    }
+
+    &__inputbox, label{
+        font-size: 1.6rem;
+        color: $primary-font-color;
+    }
+
+    &__icons{
+        font-size: 1.8rem;
+        padding-left: .8rem;
+    }
+}

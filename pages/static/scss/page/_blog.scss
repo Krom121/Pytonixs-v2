@@ -1,0 +1,19 @@
+.blog-page{
+    padding: 15rem 0;
+    color: #344;
+    text-align: center;
+
+    &__heading{
+        font-size: 4rem;
+        text-transform: uppercase;
+    }
+
+    &__list-heading{
+        text-transform: uppercase;
+    }
+
+    &__date{
+        font-size: 1.4;
+        padding: .5rem;
+    }
+}

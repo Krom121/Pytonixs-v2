@@ -1,0 +1,62 @@
+.service-page{
+    padding: 17rem 0;
+    color: #eee;
+    background: linear-gradient(to top,
+    rgba($color-primary-light, 0.6), 
+    rgba($color-primary-dark, 0.7));
+    border-top-left-radius: 0 0;
+    border-top-right-radius: 50% 50%;
+    border-bottom-left-radius: 50% 50%;
+    border-bottom-right-radius: 0 0;
+    margin-bottom: 1rem;
+
+
+    @include respond(tab-land){
+        border-top-left-radius: 0 0;
+        border-top-right-radius: 50% 25%;
+        border-bottom-left-radius: 50% 25%;
+        border-bottom-right-radius: 0 0;
+    }
+
+    @include respond(tab-port){
+        border-top-left-radius: 0 0;
+        border-top-right-radius: 50% 25%;
+        border-bottom-left-radius: 50% 25%;
+        border-bottom-right-radius: 0 0;
+    }
+
+    @include respond(phone){
+        border-top-left-radius: 0 0;
+        border-top-right-radius: 50% 12.5%;
+        border-bottom-left-radius: 50% 12.5%;
+        border-bottom-right-radius: 0 0;
+    }
+
+    &__icon{
+        display: block;
+        font-size: 10rem;
+        font-weight: bolder;
+        text-align: center;
+    }
+
+    &__text{
+        width: 75%;
+        padding: 1rem;
+        margin-left: 20rem;
+
+        @include respond(tab-land){
+            margin-left: 10rem;
+        }
+    
+        @include respond(tab-port){
+            margin-left: 10rem;
+        }
+    }
+
+    &__heading{
+        text-align: center;
+        font-size: 2.8rem;
+        text-transform: uppercase;
+    }
+}
+

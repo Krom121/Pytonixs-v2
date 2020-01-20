@@ -1,0 +1,99 @@
+.header{
+    height: 95vh;
+    background-image: linear-gradient(to right,
+    rgba($color-primary-light, 0.9), 
+    rgba($color-primary-dark, 0.6)), 
+    url(../img/infinite-possibilities-banner.jpg);
+    background-size: cover;
+    background-position: top;
+    -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 81%, 0 85%, 0% 35%, 0 0);
+    clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 81%, 0 85%, 0% 35%, 0 0);
+    position: relative;
+
+    @include respond(tab-port){
+        width: 100% !important;
+        -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 81%, 0 85%, 0% 35%, 0 0);
+        clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 81%, 0 85%, 0% 35%, 0 0);
+    }
+
+    @include respond(phone){
+        width: 100% !important;
+    }
+}
+
+.logo-box{
+    position: absolute;
+    top: 2rem;
+    left: 4rem;
+   
+    z-index: 1;
+
+    @include respond(tab-port){
+        top: 2rem;
+        right: 3rem;
+    }
+
+    @include respond(phone){
+        top: 2rem;
+        right: 3rem;
+    }
+}
+
+.logo{
+    height: 12rem;
+    
+}
+
+.text-box{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.header-3{
+    height: 50rem;
+    background-image: linear-gradient(to bottom,
+    rgba($color-primary-light, 0.5), 
+    rgba($color-primary-dark, 0.6)), url(../img/blog-main.jpg);
+    background-size: cover;
+    background-position: top;
+
+    @include respond(tab-port){
+        width: 100% !important;
+    }
+
+    @include respond(phone){
+        width: 100% !important;
+    }
+}
+
+.text-box-2{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.logo{
+    color: #fff;
+}
+
+.about-header{
+    height: 60vh;
+    background-image: linear-gradient(to bottom,
+    rgba($color-primary-light, 0.5), 
+    rgba($color-primary-dark, 0.6)), url(../img/about-page.jpg);
+    background-size: cover;
+    background-position: bottom;
+
+    @include respond(tab-port){
+        width: 100% !important;
+    }
+
+    @include respond(phone){
+        width: 100% !important;
+    }
+}

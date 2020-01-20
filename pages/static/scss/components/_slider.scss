@@ -1,0 +1,91 @@
+.slider{
+    width: 100%;
+    overflow: hidden;
+    height: 35rem;
+}
+
+.slider figure div{
+    width: 20%;
+    float: left;
+}
+
+.slider figure slide{
+    width: 100%;
+    float: left;
+}
+
+.slider figure{
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 25s slidy infinite;
+}
+
+
+.carousel{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider--1{
+    display: flex;
+    width: 400%;
+    transition: all 0.3s;
+}
+
+.slider--1 .section{
+    flex-basis: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.controls .arrow {
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+}
+
+.arrow.left{
+    font-size: 5rem;
+    color: blue;
+    left: 1rem;
+    margin: 0 -1rem;
+
+    &.arrow:hover{
+        background-color: $secondary-bg-color;
+        color: #fff;
+        transform: translateY(-.2rem);
+        box-shadow: 0 1rem 4rem rgba(0,0,0, .4);
+    }
+
+    &.arrow:active{
+        background-color: $secondary-bg-color;
+        color: #fff;
+        transform: translateY(0);
+        box-shadow: 0 1rem 2.5rem rgba(0,0,0, .2);
+    }
+
+}
+
+.arrow.right{
+    font-size: 5rem;
+    color: blue;
+    right: 1rem;
+    margin: 0 -1rem;
+
+    &.arrow:hover{
+        background-color: $secondary-bg-color;
+        color: #fff;
+        transform: translateY(-.2rem);
+        box-shadow: 0 1rem 4rem rgba(0,0,0, .4);
+    }
+
+    &.arrow:active{
+        background-color: $secondary-bg-color;
+        color: #fff;
+        transform: translateY(0);
+        box-shadow: 0 1rem 2.5rem rgba(0,0,0, .2);
+    }
+}

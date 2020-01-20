@@ -1,0 +1,36 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 80%;
+
+   @include respond(tab-land){
+        font-size: 74.50%;
+    }
+
+    @include respond(tab-port){
+        font-size: 65%;
+    }
+
+    @include respond(big-desktop){
+        font-size: 78%;
+    }
+}
+
+body{
+   box-sizing: border-box;
+   color: #344;
+   background: $primary-bg-color;
+   padding: 1rem;
+   overflow-x: hidden;
+
+
+   @include respond(tab-port){
+        padding: 0;
+    }
+}

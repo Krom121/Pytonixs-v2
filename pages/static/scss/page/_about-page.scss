@@ -1,0 +1,36 @@
+.about{
+    padding: 6rem 0;
+    position: relative;
+    margin: 0 auto;
+}
+
+.img-box{
+    width:80%;
+}
+
+.about-img{
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10%;
+
+    
+}
+
+
+.text-box-about--red{
+    width: 35rem;
+    height: auto;
+    background-image: linear-gradient(to left,
+    rgba($primary-box-color-light, 0.9), 
+    rgba($secondary-box-color-dark, 1));
+    padding: 2rem;
+    border-radius: 3px;
+    position: absolute;
+    top: 20%;
+    right: 20%;
+}
+
+.about-text-p {
+    padding-left: 2rem;
+}

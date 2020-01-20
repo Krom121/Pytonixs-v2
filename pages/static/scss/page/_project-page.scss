@@ -1,0 +1,65 @@
+.project-page{
+    padding: 15rem 0;
+
+    &__content {
+       width: 75%; 
+       background-color: #fff;
+       margin: 0 auto;
+       box-shadow: 0 2rem 4rem rgba(#000, .4);
+       border-radius: 6px;
+       overflow: hidden; 
+       display: table;
+
+       @include respond(tab-port){
+        width: 100%;
+        }
+
+        @include respond(tab-land){
+        width: 100%;
+        }
+    }
+
+    &--left{
+        width: 40%;
+        display: table-cell;
+    }
+    
+    &--right{
+        width: 60%;
+        display: table-cell;
+        vertical-align: top;
+        padding-left: 3rem;
+    }
+
+    &--heading{
+        color: #344;
+        font-size: 2.5rem;
+        margin-top: 3rem;
+        text-transform: uppercase;
+    }
+
+    &--heading-2{
+        color: #344;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    &--text {
+        color: #344;
+        font-size: 1.4rem;
+
+        column-count: 2;
+        column-gap: 4rem;
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+    }
+
+    &--img {
+        display: block;
+        width: 100%;
+
+    }
+
+}
