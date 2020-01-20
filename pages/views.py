@@ -2,7 +2,6 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.core.mail import send_mail
 from django.views.generic import FormView ,ListView, TemplateView
-from .models import NewClient
 from .forms import ContactForm
 from blog.models import Post
 
@@ -29,6 +28,8 @@ class ServiceView(TemplateView):
 class ProjectView(TemplateView):
     template_name = 'completed_projects/projects.html'
 
+class ContactUsView(TemplateView):
+    template_name = 'contact_us/contact_us.html'
 
 class ContactView(FormView):
     form_class = ContactForm
