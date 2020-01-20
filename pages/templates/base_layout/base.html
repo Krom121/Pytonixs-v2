@@ -3,9 +3,10 @@
 <html lang="en">
     {% include "base_layout/head.html" %}
 <body>
-
+    {% include 'base_layout/navbar.html' %}
+    {% block header %}
     {% include 'base_layout/header.html' %}
-
+    {% endblock %}
     {% block content %}
 
     {% endblock  %}
