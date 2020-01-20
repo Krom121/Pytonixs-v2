@@ -14,6 +14,8 @@ django-imagekit = "*"
 djangorestframework = "*"
 markdown = "*"
 django-filter = "*"
+pillow = "*"
+django-taggit = "*"
 
 [requires]
 python_version = "3.8"

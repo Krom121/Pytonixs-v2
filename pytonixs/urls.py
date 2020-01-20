@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
-from pages.views import AboutView, HomeView, ProjectView, ServiceView, ContactView
+from pages.views import AboutView, ContactUsView, HomeView, ProjectView, ServiceView, ContactView
 from blog.views import PostListView, PostDetailView
 from rest_framework import routers, serializers, viewsets
 from rest01.views import (PostList, PostDetail, 
@@ -16,7 +16,7 @@ urlpatterns = [
     path('about_us/', AboutView.as_view(), name='about'),
     path('what_we_do/', ServiceView.as_view(), name='service'),
     path('completed_projects/', ProjectView.as_view(), name='project'),
-    path('contact_us/', ContactView.as_view(), name='contact'),
+    path('contact_us/', ContactUsView.as_view(), name='contact'),
     #### BLOG URLS ###
     path('blog', PostListView.as_view(), name='list'),
     path('post/<slug>/<pk>/', PostDetailView.as_view(), name='post-detail'),

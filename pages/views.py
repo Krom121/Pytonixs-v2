@@ -8,7 +8,7 @@ from blog.models import Post
 
 class HomeView(FormView,TemplateView):
     form_class = ContactForm
-    template_name = 'welcome/index.html'
+    template_name = 'page/welcome/index.html'
     success_url = reverse_lazy('home')
 
     def form_valid(self, form):
@@ -20,12 +20,12 @@ class HomeView(FormView,TemplateView):
     def get_context_data(self, **kwargs):
         featured = Post.published.filter(featured=True)
         context = super().get_context_data(**kwargs)
-        context['title'] = 'About Us'
+        context['title'] = 'Welcome'
         context['featured'] = featured
         return context
         
 class AboutView(TemplateView):
-    template_name = 'about_us/about.html'
+    template_name = 'page/about_us/about.html'
 
     def get_context_data(self, **kwargs):
         latest = Post.published.order_by('-publish')[0:3]
@@ -35,14 +35,14 @@ class AboutView(TemplateView):
         return context
 
 class ServiceView(TemplateView):
-    template_name = 'what_we_do/service.html'
+    template_name = 'page/what_we_do/service.html'
 
 
 class ProjectView(TemplateView):
-    template_name = 'completed_projects/projects.html'
+    template_name = 'page/completed_projects/projects.html'
 
 class ContactUsView(TemplateView):
-    template_name = 'contact_us/contact_us.html'
+    template_name = 'page/contact_us/contact_us.html'
 
 class ContactView(FormView):
     form_class = ContactForm

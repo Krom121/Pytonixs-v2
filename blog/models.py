@@ -7,7 +7,6 @@ from ckeditor.fields import RichTextField
 from imagekit.models import ImageSpecField, ProcessedImageField
 from imagekit.processors import ResizeToFill
 from taggit.managers import TaggableManager
-from django.contrib.sites.models import Site
 
 
 ###### POST CREATOR MODEL ########
