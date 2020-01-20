@@ -32,7 +32,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'blog',
     'pages',
-    'rest',
+    'rest01',
     
 ]
 
