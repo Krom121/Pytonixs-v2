@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.core.mail import send_mail
 from django.views.generic import FormView ,ListView, TemplateView
-from .forms import ContactForm
+from .forms import ContactForm, SubscribeForm
 from blog.models import Post
 
 
@@ -53,9 +53,17 @@ class ProjectView(TemplateView):
 class ContactUsView(TemplateView):
     template_name = 'page/contact_us/contact_us.html'
 
+    def post(self, request, *args, **kwargs):
+        form = ContactForm(data=request.POST)
+        if form.is_valid():
+            form.save()
+        return self.get(request, *args, **kwargs)
+
     def get_context_data(self, **kwargs):
+        form = ContactForm()
         context = super().get_context_data(**kwargs)
         context['title'] = 'Contact Us'
+        context['form'] = form
         return context
 
 class ContactView(FormView):
