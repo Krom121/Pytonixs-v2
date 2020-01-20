@@ -16,10 +16,23 @@ class HomeView(FormView,TemplateView):
         # It should return an HttpResponse.
         form.save()
         return super(HomeView, self).form_valid(form)
+
+    def get_context_data(self, **kwargs):
+        featured = Post.published.filter(featured=True)
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'About Us'
+        context['featured'] = featured
+        return context
         
 class AboutView(TemplateView):
     template_name = 'about_us/about.html'
 
+    def get_context_data(self, **kwargs):
+        latest = Post.published.order_by('-publish')[0:3]
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'About Us'
+        context['latest'] = latest
+        return context
 
 class ServiceView(TemplateView):
     template_name = 'what_we_do/service.html'
