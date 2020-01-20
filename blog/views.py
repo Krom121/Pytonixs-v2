@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse, reverse_lazy
 from django.views.generic import FormView, ListView, DetailView
-from .models import Post
+from .models import Post, Category
 from .forms import CommentForm
 from pages.forms import SubscribeForm, ContactForm
 
@@ -9,6 +9,7 @@ from pages.forms import SubscribeForm, ContactForm
 
 class PostListView(ListView):
     model = Post
+    model = Category
     template_name = 'blog/list.html'
     context_object_name = 'post'
     paginate_by = 1
@@ -26,6 +27,7 @@ class PostListView(ListView):
 
     def get_context_data(self, **kwargs):
         post = Post.published.all()[0:6]
+        
         featured = Post.published.filter(featured=True)
         latest = Post.published.order_by('-publish')[0:4]
         context = super().get_context_data(**kwargs)
@@ -40,7 +42,7 @@ class PostListView(ListView):
 
 class PostDetailView(DetailView):
     model = Post
-    template_name = 'blog/posts/detail.html'
+    template_name = 'blog/detail.html'
     context_object_name = 'post'
 
     def get_context_data(self, **kwargs):
