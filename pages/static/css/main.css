@@ -1144,6 +1144,9 @@ body {
       padding: 5rem 0;
       margin-bottom: 5rem; } }
 
+.blog-featured {
+  display: flex; }
+
 .blog-section {
   padding: 12rem 0;
   background-image: radial-gradient(circle, rgba(21, 67, 206, 0.5), rgba(214, 223, 251, 0.1)); }

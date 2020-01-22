@@ -205,7 +205,7 @@
        </p>
 
        <!-- Featured posts for landing page -->
-
+       <div class="blog-featured">
        {% for post in featured %}
        <div class="blog-card">
         <a href="{{post.get_absolute_url}}"><img src="{{post.image_thumbnail.url}}" alt="{{post.title}}" class="blog-card__img"></a>
@@ -216,6 +216,7 @@
         </div>
         </div>
         {% endfor %} 
+        </div>
             <div class="blog-section__btn margin-top-sm">
             <a href="{% url 'list' %}" class="btn btn--white">Read our lastest blogs</a>           
         </div>

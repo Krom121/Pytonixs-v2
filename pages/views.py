@@ -18,7 +18,7 @@ class HomeView(FormView,TemplateView):
         return super(HomeView, self).form_valid(form)
 
     def get_context_data(self, **kwargs):
-        featured = Post.published.filter(featured=True)
+        featured = Post.published.filter(featured=True)[0:3]
         context = super().get_context_data(**kwargs)
         context['title'] = 'Welcome'
         context['featured'] = featured
