@@ -9,7 +9,7 @@
   <div class="blog-card">
     <a href="{{post.get_absolute_url}}"><img src="{{post.image_thumbnail.url}}" alt="{{post.title}}" class="blog-card__img"></a>
     <h5 class="blog-card__title">{{post.title}}</h5>
-    <div class="blog-card__date">Published by {{post.author}}</div>
+    <div class="blog-card__date">Published {{ post.publish }} by {{ post.author }}</div>
 
     <div class="blog-card__body">
       {{post.description | truncatewords:8 | safe}}

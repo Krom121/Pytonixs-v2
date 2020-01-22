@@ -1,5 +1,52 @@
 {% extends 'base_layout/base.html' %}
 {% load static %}
+{% block header %}
+    <div class="logo-box">
+        <img src="{% static 'img/pytonixs.svg' %}" class="logo" alt="Eagle Designs logo">
+    </div>
+{% endblock %}
 {% block content %}
+<div class="post-card">
+<img class="post-card__img" src="{{post.blog_header_image.url}}" alt="{{ post.title }}">
+        <h1 class="post-card__title">{{ post.title }}</h1>
+        <p class="post-card__date">
+          Published {{ post.publish }} by {{ post.author }}
+        </p>
+        <div class="post-card_body">
+        {{ post.description|safe }}
+        </div>
+</div>
+    {% for comment in comments %}
+        <div class="comment">
+            <p class="info">
+        Comment {{ forloop.counter }} by {{ comment.name }}
+            {{ comment.created }}
+            </p>
+            {{ comment.body|safe }}
+            </div>
+            {% empty %}
+            <p>There are no comments yet.</p>
+    {% endfor %}
 
+    {% if new_comment %}
+        <h2>Your comment has been added.</h2>
+    {% else %}
+        <div class="comment_form">
+        <h2>Add a new comment</h2>
+        <form method="post">
+        {{ comment_form }}
+        {% csrf_token %}
+        <p><input type="submit" value="Add comment"></p>
+        </form>
+    {% endif %}
+        </div>
+</div>
+
+    <div class="col-1-of-4">
+    {% with comments.count as total_comments %}
+        <h4>
+        {{ total_comments }} comment{{ total_comments|pluralize }}
+        </h4>
+    {% endwith %}
+ 
 {% endblock %}

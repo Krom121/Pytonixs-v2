@@ -38,7 +38,7 @@ class PostListView(ListView):
         context['latest'] = latest
         return context
 
-
+### POST DETAIL VIEW ### 
 
 class PostDetailView(DetailView):
     model = Post
@@ -46,18 +46,9 @@ class PostDetailView(DetailView):
     context_object_name = 'post'
 
     def get_context_data(self, **kwargs):
-        form = SubscribeForm
+        comment_form = CommentForm
+        new_comment = None
         context = super().get_context_data(**kwargs)
-        context['form'] = form
+        context['new_comment'] = new_comment
+        context['comment_form'] = comment_form
         return context
-    
-    def post(self, request, *args, **kwargs):
-        form = CommentForm(request.POST)
-        if form.is_valid():
-            post = self.get_object()
-            form.instance.user = request.user
-            form.instance.post = post
-            form.save()
-            return redirect(reverse("post-detail", kwargs={
-                'pk': post.pk
-            }))

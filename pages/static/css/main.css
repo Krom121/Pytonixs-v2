@@ -309,6 +309,11 @@ body {
     font-size: 1.8rem;
     padding-left: .8rem; }
 
+.comment_form {
+  margin: 0 auto;
+  text-align: center;
+  display: block; }
+
 .review {
   height: 25rem;
   background-color: rgba(214, 223, 251, 0.8);
@@ -486,229 +491,6 @@ body {
     transform: translateY(0);
     box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.2); }
 
-.slider {
-  width: 100%;
-  overflow: hidden;
-  height: 35rem; }
-
-.slider figure div {
-  width: 20%;
-  float: left; }
-
-.slider figure slide {
-  width: 100%;
-  float: left; }
-
-.slider figure {
-  position: relative;
-  width: 500%;
-  margin: 0;
-  left: 0;
-  animation: 25s slidy infinite; }
-
-.carousel {
-  width: 100%;
-  position: relative;
-  overflow: hidden; }
-
-.slider--1 {
-  display: flex;
-  width: 400%;
-  transition: all 0.3s; }
-
-.slider--1 .section {
-  flex-basis: 100%;
-  justify-content: center;
-  align-items: center; }
-
-.controls .arrow {
-  position: absolute;
-  top: 50%;
-  cursor: pointer; }
-
-.arrow.left {
-  font-size: 5rem;
-  color: blue;
-  left: 1rem;
-  margin: 0 -1rem; }
-  .arrow.left.arrow:hover {
-    background-color: #5e7db9;
-    color: #fff;
-    transform: translateY(-0.2rem);
-    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.4); }
-  .arrow.left.arrow:active {
-    background-color: #5e7db9;
-    color: #fff;
-    transform: translateY(0);
-    box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.2); }
-
-.arrow.right {
-  font-size: 5rem;
-  color: blue;
-  right: 1rem;
-  margin: 0 -1rem; }
-  .arrow.right.arrow:hover {
-    background-color: #5e7db9;
-    color: #fff;
-    transform: translateY(-0.2rem);
-    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.4); }
-  .arrow.right.arrow:active {
-    background-color: #5e7db9;
-    color: #fff;
-    transform: translateY(0);
-    box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.2); }
-
-.card {
-  perspective: 350rem;
-  -moz-perspective: 350rem;
-  position: relative;
-  height: 56rem;
-  color: #344; }
-  .card__side {
-    height: 56rem;
-    transition: all .8s ease;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    border-radius: 3px;
-    overflow: hidden;
-    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4); }
-    .card__side--front {
-      background-color: #fff; }
-    .card__side--back {
-      transform: rotateY(180deg);
-      background-image: linear-gradient(90deg, rgba(75, 115, 237, 0.12), #1543ce); }
-  .card:hover .card__side--front {
-    transform: rotateY(-180deg); }
-  .card:hover .card__side--back {
-    transform: rotateY(0); }
-  .card__heading {
-    font-size: 3rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    text-align: center; }
-  .card__details {
-    padding: 3rem; }
-    .card__details ul {
-      list-style: none;
-      width: 80%;
-      margin: 0 auto; }
-      .card__details ul li {
-        text-align: center;
-        font-size: 2.2rem;
-        padding: 1.5rem; }
-        .card__details ul li:not(:last-child) {
-          border-bottom: 1px solid #eee; }
-  .card__price-box {
-    text-align: center;
-    margin-top: 2rem; }
-  .card__price-only {
-    font-size: 1.4rem;
-    text-transform: uppercase; }
-  .card__price-value {
-    font-size: 4rem;
-    font-weight: 300;
-    color: red; }
-  @media (max-width: 56.25em) {
-    .card .card {
-      position: relative;
-      height: auto;
-      color: #344; }
-      .card .card__side {
-        height: auto;
-        position: relative;
-        width: 100%;
-        border-radius: 3px;
-        overflow: hidden;
-        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4); }
-        .card .card__side--front {
-          background-color: #fff; }
-        .card .card__side--back {
-          transform: rotateY(0);
-          background-image: linear-gradient(90deg, rgba(75, 115, 237, 0.12), #1543ce); }
-      .card .card:hover .card .card__side--front {
-        transform: rotateY(0); }
-      .card .card:hover .card .card__side--back {
-        transform: rotateY(0); }
-      .card .card__heading {
-        font-size: 3rem;
-        font-weight: 400;
-        text-transform: uppercase;
-        text-align: center; }
-      .card .card__details {
-        padding: 3rem; }
-        .card .card__details ul {
-          list-style: none;
-          width: 80%;
-          margin: 0 auto; }
-          .card .card__details ul li {
-            text-align: center;
-            font-size: 2.2rem;
-            padding: 1.5rem; }
-            .card .card__details ul li:not(:last-child) {
-              border-bottom: 1px solid #eee; }
-      .card .card__price-box {
-        text-align: center;
-        margin-top: 2rem; }
-      .card .card__price-only {
-        font-size: 1.4rem;
-        text-transform: uppercase; }
-      .card .card__price-value {
-        font-size: 4rem;
-        font-weight: 300;
-        color: red; } }
-
-@media (max-width: 75em) {
-  .card {
-    position: relative;
-    height: auto;
-    color: #344; }
-    .card__side {
-      height: auto;
-      position: relative;
-      width: 100%;
-      border-radius: 3px;
-      overflow: hidden;
-      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4); }
-      .card__side--front {
-        background-color: #fff; }
-      .card__side--back {
-        transform: rotateY(0);
-        background-image: linear-gradient(90deg, rgba(75, 115, 237, 0.12), #1543ce); }
-    .card:hover .card__side--front {
-      transform: rotateY(0); }
-    .card:hover .card__side--back {
-      transform: rotateY(0); }
-    .card__heading {
-      font-size: 3rem;
-      font-weight: 400;
-      text-transform: uppercase;
-      text-align: center; }
-    .card__details {
-      padding: 3rem; }
-      .card__details ul {
-        list-style: none;
-        width: 80%;
-        margin: 0 auto; }
-        .card__details ul li {
-          text-align: center;
-          font-size: 2.2rem;
-          padding: 1.5rem; }
-          .card__details ul li:not(:last-child) {
-            border-bottom: 1px solid #eee; }
-    .card__price-box {
-      text-align: center;
-      margin-top: 2rem; }
-    .card__price-only {
-      font-size: 1.4rem;
-      text-transform: uppercase; }
-    .card__price-value {
-      font-size: 4rem;
-      font-weight: 300;
-      color: red; } }
 .feature-box {
   background-color: rgba(255, 255, 255, 0.6);
   font-size: 1.8rem;
@@ -752,16 +534,6 @@ body {
   .feature-box:hover {
     transform: translateY(-0.3rem);
     box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, 0.8); }
-
-.ads {
-  width: 100%;
-  height: 30rem;
-  margin-top: 5rem; }
-  .ads__box {
-    height: 30rem;
-    background-image: linear-gradient(to bottom, rgba(75, 115, 237, 0.8), rgba(21, 67, 206, 0.8));
-    background-size: cover;
-    background-position: bottom; }
 
 .about-image {
   width: 100%;
@@ -1064,16 +836,16 @@ body {
   transform: translate(-50%, -50%);
   text-align: center; }
 
-.header-3 {
+.header-post {
   height: 50rem;
-  background-image: linear-gradient(to bottom, rgba(75, 115, 237, 0.5), rgba(21, 67, 206, 0.6)), url(../img/blog-main.jpg);
+  background-image: linear-gradient(to bottom, rgba(75, 115, 237, 0.5), rgba(21, 67, 206, 0.6));
   background-size: cover;
   background-position: top; }
   @media (max-width: 56.25em) {
-    .header-3 {
+    .header-post {
       width: 100% !important; } }
   @media (max-width: 37.5em) {
-    .header-3 {
+    .header-post {
       width: 100% !important; } }
 
 .text-box-2 {
@@ -1194,9 +966,10 @@ body {
   flex: 1; }
 
 .blog-card {
-  padding: 1rem; }
+  padding: 1rem;
+  margin: 1rem; }
   .blog-card__img {
-    width: 100%;
+    width: 75%;
     border-radius: 3px; }
   .blog-card__title {
     font-size: 2.5rem;
@@ -1238,6 +1011,31 @@ body {
   .category__title {
     font-size: 1.8rem;
     color: #344; }
+
+.post-card {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin: 0 auto; }
+  .post-card__img {
+    height: 50vh;
+    width: 75%;
+    margin: 0 auto;
+    margin-bottom: 2rem; }
+  .post-card__title {
+    font-size: 4rem;
+    color: #344;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    margin-bottom: 2rem; }
+  .post-card__date {
+    color: #344;
+    text-align: center;
+    margin-bottom: 2rem; }
+  .post-card_body {
+    color: #344;
+    text-align: center; }
 
 .contact-page {
   padding: 50rem 0;
