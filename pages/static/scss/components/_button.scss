@@ -8,6 +8,7 @@
         display: inline-block;
         border-radius: 10rem;
         transition: all .2s;
+        margin-top: 3rem;
 
         @include respond(tab-port){
             padding: .5rem 1rem;
@@ -52,7 +53,7 @@
     }
 
     &--form{
-        color: green;
+        color: white;
         background: inherit;
         text-transform: uppercase;
         font-size: 2rem;
@@ -63,6 +64,7 @@
         padding: 1.5rem 2rem;
         cursor: pointer;
         transition: all .4s ease-in;
+        margin-top: 3rem;
 
         &:hover{
             background: green;
@@ -98,6 +100,7 @@
         padding: 1.5rem 3rem;
         cursor: pointer;
         transition: all .2s;
+        margin-top: 3rem;
 
         &:hover{
             background: green;
