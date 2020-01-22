@@ -1,7 +1,7 @@
 {% extends 'base_layout/base.html' %}
+{% load static %}
 {% block header %}
 {% endblock %}
-{% load static %}
 {% block content %}
 <div class="blog-list-grid">
   <div class="col-left">
@@ -12,7 +12,7 @@
     <div class="blog-card__date">Published by {{post.author}}</div>
 
     <div class="blog-card__body">
-      {{post.description | truncatewords:30 | safe}}
+      {{post.description | truncatewords:8 | safe}}
     </div>
   </div>
   {% endfor %}

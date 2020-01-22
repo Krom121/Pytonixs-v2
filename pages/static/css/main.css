@@ -753,33 +753,6 @@ body {
     transform: translateY(-0.3rem);
     box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, 0.8); }
 
-.blog-box {
-  width: 100%;
-  height: 95vh;
-  text-align: center;
-  color: #344;
-  padding: 1rem;
-  margin: 0 auto; }
-  .blog-box__heading {
-    font-size: 4rem;
-    text-transform: uppercase;
-    margin-bottom: 2rem;
-    transition: all .4s; }
-  .blog-box__link {
-    text-decoration: none;
-    font-size: 3.2rem;
-    color: #4b73ed; }
-    .blog-box__link:hover {
-      color: #5b4;
-      transform: translateY(1.5rem) scale(1.03); }
-  .blog-box__content {
-    margin-top: 1.5rem; }
-  .blog-box__date {
-    color: #f55; }
-  .blog-box__break {
-    width: 50%;
-    margin: 2rem auto; }
-
 .ads {
   width: 100%;
   height: 30rem;
@@ -1050,24 +1023,6 @@ body {
   .row .col-3-of-4 {
     width: calc( 3 * ((100% - 2 * 6rem) / 3 ) + 2 * 6rem); }
 
-.grid-container {
-  width: 75%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: .5rem; }
-  @media (max-width: 56.25em) {
-    .grid-container {
-      grid-gap: .5rem; } }
-  @media (max-width: 37.5em) {
-    .grid-container {
-      grid-gap: 0; } }
-
-.grid-container-2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 1rem;
-  grid-auto-rows: minmax(20rem, auto); }
-
 .header {
   height: 95vh;
   background-image: linear-gradient(to right, rgba(75, 115, 237, 0.9), rgba(21, 67, 206, 0.6)), url(../img/infinite-possibilities-banner.jpg);
@@ -1227,18 +1182,37 @@ body {
 .col-left {
   display: flex;
   flex-wrap: wrap;
-  flex: 2;
-  padding: 1rem; }
+  flex: 3;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin: 1rem; }
 
 .col-right {
   display: flex;
   flex-direction: column;
   flex: 1; }
 
+.blog-card {
+  padding: 1rem; }
+  .blog-card__img {
+    width: 100%;
+    border-radius: 3px; }
+  .blog-card__title {
+    font-size: 2.5rem;
+    color: #344; }
+  .blog-card__date {
+    font-size: 1.2rem;
+    color: #344; }
+  .blog-card__body {
+    font-size: 1.6rem;
+    color: #344; }
+
 .latest-post {
   text-align: center; }
   .latest-post__primary-title {
-    font-size: 2.5rem; }
+    font-size: 2.5rem;
+    color: #344; }
   .latest-post__title {
     font-size: 1.8rem;
     color: #344; }
@@ -1248,7 +1222,8 @@ body {
 .featured-post {
   text-align: center; }
   .featured-post__primary-title {
-    font-size: 2.5rem; }
+    font-size: 2.5rem;
+    color: #344; }
   .featured-post__title {
     font-size: 1.8rem;
     color: #344; }
@@ -1258,7 +1233,8 @@ body {
 .category {
   text-align: center; }
   .category__primary-title {
-    font-size: 2.5rem; }
+    font-size: 2.5rem;
+    color: #344; }
   .category__title {
     font-size: 1.8rem;
     color: #344; }

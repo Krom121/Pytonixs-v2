@@ -68,27 +68,3 @@
         width: calc( 3 * ((100% - 2 * #{$gutter-horizontal}) / 3 ) + 2 * #{$gutter-horizontal});
     }
 }
-
-// css grid
-
-.grid-container{
-    width: 75%;
-    display: grid;
-    grid-template-columns:repeat(2, 1fr);
-    grid-gap: .5rem;
-
-    @include respond(tab-port){
-        grid-gap: .5rem;
-    }
-
-    @include respond(phone){
-        grid-gap: 0;
-    }
-}
-
-.grid-container-2{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 1rem;
-    grid-auto-rows: minmax(20rem, auto);
-}
