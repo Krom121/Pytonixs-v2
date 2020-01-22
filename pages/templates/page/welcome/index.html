@@ -29,7 +29,7 @@
     </div>
 </section>
 <section class="process">
-    <h2 class="white-heading margin-bottom-lg">Code Forge</h2>
+    <h2 class="white-heading margin-bottom-lg"><i>Get Pytonix</i></h2>
     <div class="row process-box">
         <div class="col-1-of-2">
             <img src="{% static 'img/meetings.png' %}" alt="meeting people" class="process-box__img">
@@ -202,9 +202,22 @@
         find out about our hobbies, our favorite movies. 
         Leave your comments and tell us what you think. 
         As we would love to get to know you too.
-       </p> 
-       <div class="blog-section__btn margin-top-sm">
-       <a href="#" class="btn btn--white">Read our lastest blogs</a>           
+       </p>
+
+       <!-- Featured posts for landing page -->
+
+       {% for post in featured %}
+       <div class="blog-card">
+        <a href="{{post.get_absolute_url}}"><img src="{{post.image_thumbnail.url}}" alt="{{post.title}}" class="blog-card__img"></a>
+        <h5 class="blog-card__title">{{post.title}}</h5>
+        <div class="blog-card__date">Published by {{post.author}}</div>
+        <div class="blog-card__body">
+            {{post.description | truncatewords:8 | safe}}
+        </div>
+        </div>
+        {% endfor %} 
+            <div class="blog-section__btn margin-top-sm">
+            <a href="{% url 'list' %}" class="btn btn--white">Read our lastest blogs</a>           
         </div>
     </div>  
 </section>
